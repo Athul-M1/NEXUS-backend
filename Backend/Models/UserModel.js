@@ -10,17 +10,28 @@ const userSchema = new mongoose.Schema({
         type: String
     },
     password: {
-        required: true,
+        // required: true,
         type: String
     },
     age:{
         type:Number
     },
     gender:String,
-    profilePicture:String,
+    profilePicture:String,   
     role:{
         type:String,
         default:0
+    },
+    otpExpires:{
+        type:Date
+    },
+    isVerified:{
+        required:true,
+        type:Boolean,
+        default:false
+    },
+    otp:{
+        type:String
     }
 })
 const userModel = mongoose.model('userModel', userSchema)

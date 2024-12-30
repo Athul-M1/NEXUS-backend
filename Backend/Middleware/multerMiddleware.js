@@ -13,7 +13,7 @@ const fileFilter = (req,file,callback)=>{
     if(file.mimetype==="image/jpg" || file.mimetype === "image/png" || file.mimetype === "image/jpeg"){
         return callback(null,true)
     }
-    req.fileValidationError = "Only Jpg and png are allowed"
+    req.fileValidationError = "Only Jpg and png are allowed"   
         return callback(null,false)
 }
 
